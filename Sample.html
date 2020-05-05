@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Sample.css" />
+    <title>Document</title>
+  </head>
+  <!-- <body onload="init()"> -->
+  <body>
+    <!-- <script src="Sample2.js" charset="UTF-8"></script> -->
+
+    <img
+      id="image"
+      src="pic5.jpg"
+      name="image"
+      alt="pic"
+      onclick="change()"
+      onmouseover="down()"
+      onmouseout="up()"
+    />
+    <div class="navigation">
+      <input type="button" value="アバター舞台" onclick="change2()" />
+    </div>
+    <p id="content" onclick="change3()">お問い合わせはこちらから</p>
+    <div id="description"></div>
+
+    <img id="bigimage" src="pic0.jpg" />
+
+    <div class="navigation">
+      <input type="button" value="再生" onclick="start()" />
+      <input type="button" value="停止" onclick="stop()" />
+    </div>
+
+    <div class="thumbnail">
+      <img id="smallimage" src="pic0.jpg" onclick="change4('pic0.jpg')" />
+      <img id="smallimage" src="pic1.jpg" onclick="change4('pic1.jpg')" />
+      <img id="smallimage" src="pic2.jpg" onclick="change4('pic2.jpg')" />
+      <img id="smallimage" src="pic3.jpg" onclick="change4('pic3.jpg')" />
+      <img id="smallimage" src="pic4.jpg" onclick="change4('pic4.jpg')" />
+      <img id="smallimage" src="pic5.jpg" onclick="change4('pic5.jpg')" />
+    </div>
+
+    <form name="myform" action="Sample.html" onsubmit="return check()">
+      <table>
+        <tr>
+          <td>お名前</td>
+          <td>
+            <input type="text" name="name" />
+          </td>
+        </tr>
+        <tr>
+          <td>メールアドレス</td>
+          <td>
+            <input type="text" name="address" />
+          </td>
+        </tr>
+        <tr>
+          <td>性別</td>
+          <td>
+            <input type="radio" value="男性" name="gen" id="" />男性
+            <input type="radio" value="女性" name="gen" id="" />女性
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="送信" />
+    </form>
+
+    <form name="myform2" action="Sample.html">
+      <select name="items" size="3">
+        <option value="りんご">りんご</option>
+        <option value="みかん">みかん</option>
+        <option value="もも">もも</option>
+      </select>
+      <input type="button" value="追加" onclick="add()" />
+    </form>
+    <div>
+      <table id="table"></table>
+    </div>
+
+    <form name="myform3" action="Sample.html">
+      <select name="items" id="">
+        <option value="りんご">りんご</option>
+        <option value="みかん">みかん</option>
+        <option value="もも">もも</option>
+      </select>
+
+      <select name="num" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+      <input type="button" value="追加" onclick="add2()" />
+      <input type="button" value="クリア" onclick="cls()" />
+      <input type="button" value="合計" onclick="cals()" />
+    </form>
+
+    <table id="table2">
+      <tr>
+        <th>商品名</th>
+        <th>価格</th>
+        <th>個数</th>
+        <th>計</th>
+      </tr>
+    </table>
+
+    <ol id="lists"></ol>
+    <button id="addBtn">さらに読み込む</button>
+    <script src="Sample.js" charset="UTF-8"></script>
+  </body>
+</html>
